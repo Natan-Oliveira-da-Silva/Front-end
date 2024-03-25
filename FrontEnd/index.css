@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Bonbon&family=Noto+Sans+Zanabazar+Square&display=swap");
+. {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: url(https://assets.papodehomem.com.br/2017/05/17/01/27/44/9b19b818-9b4b-4260-aa5d-1a885ea384a0/dc375254715b15951cb1ac668b3abd91-jpg);
+  background-position: center;
+  color: #5C4033;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  
+  font-family: "Noto Sans Zanabazar Square", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.em_coluna {
+  display: flex;
+  flex-direction: column;
+}
+h1 {
+  text-align: center;
+  font-family: "Bonbon", cursive;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 30px;
+}
+#formulario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+}
+.container {
+    
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 4%;
+}
+form {
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  max-width: 500px;
+  /*height:450px;*/
+  padding: 40px;
+  border-radius: 20px;
+}
+form h1 {
+  text-align: center;
+  font-size: 40px;
+  color: brown;
+}
+form p {
+  text-align: center;
+  margin-top: 20px 0;
+}
+.cada_entrada {
+  position: relative;
+  margin: 30px 0;
+}
+.cada_entrada label {
+  position: absolute;
+  left: 0;
+  bottom: 5px;
+  transition: all 0.2s;
+  cursor: text;
+}
+.entrada {
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid #ccc;
+  padding: 5px;
+  font-size: 17px;
+  outline: 0;
+}
+form .cada_entrada .entrada:focus ~ label,
+form .cada_entrada .entrada:valid ~ label {
+  transform: translateY(-24px);
+  font-size: 12px;
+  color: brown;
+}
+.btn {
+  width: 100%;
+  text-align: center;
+}
+form input[type="submit"] {
+  padding: 10px 40px;
+  border: 0;
+  border-radius: 10px;
+  background-color: brown;
+  color: white;
+  cursor: pointer;
+}
