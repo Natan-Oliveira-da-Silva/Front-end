@@ -83,7 +83,7 @@ form .cada_entrada .entrada:focus ~ label,
 form .cada_entrada .entrada:valid ~ label {
   transform: translateY(-24px);
   font-size: 12px;
-  color: brown;
+  /*color: brown;*/
 }
 .btn {
   width: 100%;
