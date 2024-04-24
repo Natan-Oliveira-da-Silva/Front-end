@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 body {
-  background-image: url(https://assets.papodehomem.com.br/2017/05/17/01/27/44/9b19b818-9b4b-4260-aa5d-1a885ea384a0/dc375254715b15951cb1ac668b3abd91-jpg);
+  background-image: url(Imagem_de_fundo.jpeg);
   background-position: center;
   color: #5C4033;
   background-repeat: no-repeat;
@@ -109,28 +109,99 @@ form input[type="submit"] {
   border: 0;
   border-radius: 10px;
   background-color: brown;
+  font-size: 17px;
   color: white;
   cursor: pointer;
 }
 .avaliacao{
   display:flex;
 }
-.star-icon{
-  list-style-type:none;
-  border:1px solid #fff;
-  cursor:pointer;
-  color:#ffe500;
-  font-size: 35px;
+:root {
+    --star-color: #d4d4d4;
+    --yellow: #ffeb3b;
 }
-.star-icon::before{
-  content: "\2605";
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
-.star-icon.ativo ~ .star-icon::before{
-  content: "\2606";
+
+* {
+    margin: 0;
+    padding: 0;
 }
-.avaliacao:hover .star-icon::before{
-  content: "\2605";
+
+.container {
+    width: 100%;
+    max-width: 500px;
+    padding: 0 10px;
 }
-.star-icon:hover ~ .star-icon::before{
-  content: "\2606";
+.rating-label{
+    font-family: "Noto Sans Zanabazar Square", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size:17px;
+
+}
+.rating-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.rating-star {
+    position: relative;
+    display: flex;
+    margin: 10px 0;
+    flex-direction: row-reverse;
+}
+
+.rating-star input {
+    position: relative;
+    width: 20px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    appearance: none;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.rating-star input::before {
+    content: '\eeb8';
+    position: absolute;
+    font-family: boxicons;
+    font-size: 34px;
+    position: absolute;
+    left: 4px;
+    color: var(--star-color);
+    transition: all .3s;
+}
+
+.rating-star input:nth-child(2n + 1)::before {
+    right: 4px;
+    left: initial;
+}
+
+.rating-star input:hover ~ input::before,
+.rating-star input:hover::before,
+.rating-star input:checked ~ input::before,
+.rating-star input:checked::before {
+    color: var(--yellow);
+}
+
+.rating-star.rating-blue input:hover ~ input::before,
+.rating-star.rating-blue input:hover::before,
+.rating-star.rating-blue input:checked ~ input::before,
+.rating-star.rating-blue input:checked::before {
+    color: var(--yellow);
+}
+
+.rating-star.rating-green input:hover ~ input::before,
+.rating-star.rating-green input:hover::before,
+.rating-star.rating-green input:checked ~ input::before,
+.rating-star.rating-green input:checked::before {
+    color: var(--yellow);
 }
