@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Bonbon&family=Noto+Sans+Zanabazar+Square&display=swap");
-*{
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -30,6 +31,9 @@ h1 {
   font-weight: 500;
   font-style: normal;
   font-size: 30px;
+}
+h2{
+  text-align: center;
 }
 #formulario {
   display: flex;
@@ -85,9 +89,20 @@ form .cada_entrada .entrada:valid ~ label {
   font-size: 12px;
   /*color: brown;*/
 }
+
+/*      */
+form text[type="submit"] {
+  padding: 10px 40px;
+  border: 0;
+  border-radius: 10px;
+  background-color: brown;
+  color: white;
+  cursor: pointer;
+}
 .btn {
   width: 100%;
   text-align: center;
+
 }
 form input[type="submit"] {
   padding: 10px 40px;
@@ -96,4 +111,26 @@ form input[type="submit"] {
   background-color: brown;
   color: white;
   cursor: pointer;
+}
+.avaliacao{
+  display:flex;
+}
+.star-icon{
+  list-style-type:none;
+  border:1px solid #fff;
+  cursor:pointer;
+  color:#ffe500;
+  font-size: 35px;
+}
+.star-icon::before{
+  content: "\2605";
+}
+.star-icon.ativo ~ .star-icon::before{
+  content: "\2606";
+}
+.avaliacao:hover .star-icon::before{
+  content: "\2605";
+}
+.star-icon:hover ~ .star-icon::before{
+  content: "\2606";
 }
